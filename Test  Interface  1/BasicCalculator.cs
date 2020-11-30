@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace Test__Interface__1
 {
-    class BasicCalculator : BasicCalculatorInterface 
+    class BasicCalculator : Calculator, BasicCalculatorInterface 
     {
-       
+        public BasicCalculator() { }
+        public BasicCalculator(string cal, string power) : base(cal, power)
+        {
+
+        }
         int r;
         public int sum(int n1, int n2)
         {
